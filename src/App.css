@@ -5,6 +5,11 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+
+}
+
+.Titulo {
+  color: red
 }
 
 @media (prefers-reduced-motion: no-preference) {
