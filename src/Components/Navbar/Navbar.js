@@ -5,12 +5,12 @@ const Navbar = () => {
     return (
         <nav style={{ display: 'flex', justifyContent: 'space-around'}}>
             <div>
-                <h1>Ecommerce</h1>
+                <h1>Usados Seleccionados</h1>
             </div>
             <div>
+                <button>Ropa</button>
+                <button>Calzado</button>
                 <button>Celulares</button>
-                <button>Tablets</button>
-                <button>Notebook</button>
             </div>
             <div>
                 <CartWidget />
