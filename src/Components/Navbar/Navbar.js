@@ -6,9 +6,9 @@ const Navbar = () => {
     return (
         <nav style={{ display: 'flex', justifyContent: 'space-around'}}>
             <div>
-                <link to='/'>
+                <Link to='/'>
                     <h1>Franqoise</h1>
-                </link>               
+                </Link>               
                     <h3>Seleccionados Premium</h3>
             </div>
             <div className='Categories'>
