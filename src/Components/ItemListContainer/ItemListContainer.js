@@ -13,7 +13,7 @@ const ItemListContainer = ({ greeting }) => {
     console.log(categoryId)
 
     useEffect(() => {
-        if(categoryId) {
+        if(!categoryId) {
             getProduct().then(res => {
                 console.log(res)
                 setProducts(res)

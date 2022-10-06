@@ -21,7 +21,7 @@ const products = [
         id: '3',
         name: 'Zapatillas',
         price: '3500',
-        category: 'zapatillas',
+        category: 'Zapatillas',
         img: 'https://http2.mlstatic.com/D_NQ_NP_992933-MLA51065256745_082022-W.jpg',
         stock: 5,
         description: 'Zapatilla usada'
@@ -31,7 +31,7 @@ const products = [
 export const getProduct = (id) => {
     return new Promise ((resolve) => {
         setTimeout (() => {
-            resolve(products.find (prod => prod.id === id ))
+            resolve(products.find (prod => prod.id === Number (id) ))
         },1000)
     })
 }
@@ -47,7 +47,8 @@ export const getProductsByCategory = (categoryId) => {
     export const getProductById = (id) => {
         return new Promise((resolve) => {
             setTimeout(() => {
-                resolve(products.find(prod => prod.id === id))
+                resolve(products.find(prod => prod.id === Number(id)))
             }, 500)
         })
 }
+
