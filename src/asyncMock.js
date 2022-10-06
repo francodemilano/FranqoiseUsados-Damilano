@@ -1,7 +1,7 @@
 const products = [
     {
         id: '1',
-        name: 'Remera',
+        name: 'Remera manga corta',
         price: '1500',
         category: 'Indumentaria',
         img: 'https://apollo-virginia.akamaized.net/v1/files/px297b1luzyo1-AR/image;s=272x0',
@@ -19,7 +19,7 @@ const products = [
     },
     {
         id: '3',
-        name: 'Zapatillas',
+        name: 'Zapatillas Nike 42',
         price: '3500',
         category: 'Zapatillas',
         img: 'https://http2.mlstatic.com/D_NQ_NP_992933-MLA51065256745_082022-W.jpg',
@@ -31,24 +31,23 @@ const products = [
 export const getProduct = (id) => {
     return new Promise ((resolve) => {
         setTimeout (() => {
-            resolve(products.find (prod => prod.id === Number (id) ))
-        },1000)
-    })
-}
+            resolve(products);
+        },1000);
+    });
+};
 
 export const getProductsByCategory = (categoryId) => {
     return new Promise ((resolve) =>{
         setTimeout(()=> {
-            resolve(products.filter(prod => prod.category === categoryId))
-        },1000)
-    })  
-}
+            resolve(products.filter((prod) => prod.category === categoryId))
+        },1000);
+    });
+};
  
     export const getProductById = (id) => {
         return new Promise((resolve) => {
             setTimeout(() => {
-                resolve(products.find(prod => prod.id === Number(id)))
-            }, 500)
-        })
-}
-
+                resolve(products.find((prod) => prod.id === id))
+            }, 500);
+        });
+};

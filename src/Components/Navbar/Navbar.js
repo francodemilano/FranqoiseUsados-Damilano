@@ -8,13 +8,13 @@ const Navbar = () => {
       <nav className="NavBar" >
           <div className='NavBar'>
             <Link to='/'>
-              <h3>Ecommerce</h3>
+              <h3>Franqoise Usados</h3>
             </Link>
           </div>
           <div className="Categories">
-              <Link to='/category/celular' className="Option">Celular</Link>
-              <Link to='/category/tablet' className="Option">Tablet</Link>
-              <Link to='/category/notebook' className="Option">Notebook</Link>
+              <Link to='/category/Indumentaria' className="Option">Indumentaria</Link>
+              <Link to='/category/Celulares' className="Option">Celulares</Link>
+              <Link to='/category/Zapatillas' className="Option">Zapatillas</Link>
           </div>
           <CartWidget />
       </nav>
