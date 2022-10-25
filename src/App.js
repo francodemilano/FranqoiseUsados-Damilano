@@ -1,10 +1,9 @@
-import { useState } from 'react';
 import './App.css';
-import Navbar from './Components/Navbar/Navbar'
-import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
-import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-
+import Navbar from './Components/Navbar/Navbar';
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Animation from './Components/Animation/Animation';
 
 
 function App() {
@@ -27,6 +26,7 @@ function App() {
         
       </Routes>
       </BrowserRouter>
+      
     </div>
   );
 }
