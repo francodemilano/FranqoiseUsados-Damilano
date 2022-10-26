@@ -1,15 +1,18 @@
 import './Item.css'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react'
+// import { Context} from '../../App'
+
 
 const Item = ({id, name, img, price}) => {
 
-    const handleClick = (e) => {
-        e.stopPropagation()
-        console.log('hice click en item')
-    }
+    // const value = useContext(Context)
+
+    // console.log(value)
+
 
     return (
-        <article className="CardItem" onClick={handleClick}>
+        <article className="CardItem">
             <header className="Header">
                 <h2 className="ItemHeader">
                     {name}
