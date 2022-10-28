@@ -24,8 +24,7 @@ const ItemListContainer = ({ greeting }) => {
         
 
         getDocs(collectionRef).then(response => {
-            console.log(response)
-
+          
             const productsAdapted = response.docs.map(doc => {
                 const data = doc.data ()
                 return {id: doc.id, ...data}
@@ -57,11 +56,9 @@ const ItemListContainer = ({ greeting }) => {
 
 
     return (
-        <div onClick={() => console.log('click en itemlistcontainer')}>
+        <div>
             <h1>{`${greeting} ${categoryId || ''}`}</h1>
-            <h2>Productos</h2>
-            {/* <button onClick={(e) => console.log(e)}>boton</button> */}
-            { products.length > 0 && <ItemList products={products} /> }
+            <ItemList products={products} />
         </div>
     )
 }
