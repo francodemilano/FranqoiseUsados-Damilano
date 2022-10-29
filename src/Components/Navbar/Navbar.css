@@ -4,7 +4,7 @@
   justify-content: space-around;
   align-items: center;
   height: 60px;
-  background: wheat;
+  background: rgb(160, 154, 144);
 }
 
 .Categories {
@@ -21,8 +21,8 @@
   /* TODO */
   width: auto;
   padding: 12px;
-  font-size: 8px;
-  background: #8C30F5;
+  font-size: 9px;
+  background: #141314;
   border-radius: 8px;
   flex: none;
   display: flex;
@@ -32,7 +32,7 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: #FFFFFF;
+  color: #f89595;
   border: none;
   border-style: none;
   cursor: pointer;
@@ -66,5 +66,5 @@
 }
 
 .NavLink {
-  color :rgb(255, 0, 0)
+  color :rgb(51, 248, 44)
 }

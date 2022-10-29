@@ -1,7 +1,7 @@
 import CartWidget from '../CartWidget/CartWidget'
 import { useState, useEffect } from 'react'
 import './Navbar.css'
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { collection, getDocs, query, orderBy } from 'firebase/firestore'
 import { db } from '../../service/firebase'
 
@@ -28,7 +28,7 @@ const NavBar = () => {
   return (
     <nav className="NavBar" >
         <Link to='/'>
-          <h3>Ecommerce</h3>
+          <h3>Franqoise Usados</h3>
         </Link>
         <div className="Categories">
             { categories.map(cat => (
