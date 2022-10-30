@@ -22,7 +22,7 @@ function App() {
                   <Route path='/category/:categoryId' element={<ItemListContainer greeting='Listado de categoria: '/>} />
                   <Route path='/detail/:productId' element={<ItemDetailContainer />} />  
                   <Route path='/cart' element={<Cart />} />
-                  <Route path='/checkout' element={<Checkout />} />
+                  <Route path='/CheckOut' element={<Checkout />} />
                   <Route path='*' element={<h1>404 NOT FOUND</h1>} /> 
               </Routes>
             </BrowserRouter>
