@@ -20,7 +20,7 @@
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
-    border: 1px solid #ff5800;
+    border: 1px solid #5d14e4;
     font-family: 'calibri';
     font-size: 18px;
     color: white;
@@ -45,7 +45,7 @@
   
   .form-register .botons {
     width: 100%;
-    background: #ff5800;
+    background: #5d14e4;
     border: none;
     padding: 12px;
     color: white;
