@@ -1,8 +1,10 @@
-import { Form } from '../Form/Form'
+import Form from '../Form/Form'
 import { useState, useContext } from "react"
 import { CartContext } from "../../Context/CartContext"
-import { getDocs, addDoc, collection, doc, updateDoc, where, query, documentId, writeBatch } from 'firebase/firestore'
+import { getDocs, addDoc, collection, where, query, documentId, writeBatch } from 'firebase/firestore'
 import { db } from '../../service/firebase'
+import React from 'react'
+import swal from 'sweetalert'
 
 const Checkout = () => {
   const [loading, setLoading] = useState(false)
@@ -13,19 +15,10 @@ const Checkout = () => {
     setLoading(true)
     try {
       const objOrder = {
-        buyer, /*{
-          name: "",
-          phone: "",
-          email: "",
-          emailValidate: "",
-        },*/
+        buyer,
         items: cart,
         total
-      }
-      console.log(objOrder)
-  //    const collectionRef = collection( db, 'orders')
-
-  //    addDoc(collectionRef, objOrder)
+      };
 
       const ids = cart.map(prod => prod.id)
       const productsRef = collection(db, 'products')
@@ -37,10 +30,9 @@ const Checkout = () => {
       const outOfStock = []
 
       docs.forEach(doc => {
-        //▼base de datos actualizada
         const dataDoc = doc.data()
         const stockDb = dataDoc.stock
-        //▼lo que el usuario agregó, del cart.  
+         
         const productCartUser = cart.find(prod => prod.id === doc.id)
         const prodQuantity = productCartUser?.quantity
 
@@ -56,13 +48,17 @@ const Checkout = () => {
         
         const orderRef = collection(db, 'orders')
         const orderAdded = await addDoc(orderRef, objOrder)
+        swal (`Orden generada! Su nro de orden es ${orderAdded.id}`)
+        swal (`En breve nos pondremos en contacto para corrdinar medios de pago y metodo de envío`)
 
         console.log(`El id de su orden es: ${orderAdded.id}`)
         clearCart()
       } else {
+        swal ('error', `el producto esta temporalmente sin stock`)
         console.log('El producto seleccionado está fuera de stock')
       }      
     } catch (error) {
+      swal('error', 'Ha ocurrido un error!')
         console.log(error)
     } finally {
       setLoading(false)
